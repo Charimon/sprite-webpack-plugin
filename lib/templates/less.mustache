@@ -1,5 +1,5 @@
 {{#items}}
-@{{name}}: {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}};
+@{{name}}: {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.spriteWidth}}, {{px.spriteHeight}};
 {{/items}}
 
 .sprite-width(@sprite) {
@@ -17,7 +17,7 @@
 }
 
 .sprite-backgroundSize(@sprite) {
-  background-size: extract(@sprite, 3) extract(@sprite, 4);
+  background-size: extract(@sprite, 5) extract(@sprite, 6);
 }
 
 .sprite(@sprite) {

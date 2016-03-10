@@ -1,5 +1,5 @@
 {{#items}}
-${{name}}: {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}};
+${{name}}: {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}} {{px.spriteWidth}} {{px.spriteHeight}};
 {{/items}}
 
 @mixin sprite-width($sprite) {
@@ -25,8 +25,8 @@ ${{name}}: {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}};
 }
 
 @mixin sprite-size($sprite) {
-  $sprite-offset-width: nth($sprite, 3);
-  $sprite-offset-height: nth($sprite, 4);
+  $sprite-offset-width: nth($sprite, 5);
+  $sprite-offset-height: nth($sprite, 6);
   background-position: $sprite-offset-width  $sprite-offset-height;
 }
 
