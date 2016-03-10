@@ -16,6 +16,10 @@
   background-position: @sprite-offset-x  @sprite-offset-y;
 }
 
+.sprite-backgroundSize(@sprite) {
+  background-size: extract(@sprite, 3) extract(@sprite, 4);
+}
+
 .sprite(@sprite) {
   .sprite-position(@sprite);
   background-repeat: no-repeat;
@@ -23,6 +27,7 @@
   display: block;
   .sprite-width(@sprite);
   .sprite-height(@sprite);
+  .sprite-backgroundSize(@sprite);
 }
 
 {{#items}}

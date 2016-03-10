@@ -10,9 +10,13 @@ sprite-height($sprite)
 
 sprite-position($sprite)
   background-position $sprite[0]  $sprite[1]
+  
+sprite-size($sprite)
+  background-position $sprite[2]  $sprite[3]
 
 sprite($sprite)
   sprite-position($sprite)
+  sprite-size($sprite)
   background-repeat no-repeat
   overflow hidden
   display inline-block

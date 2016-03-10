@@ -24,8 +24,15 @@ ${{name}}: {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}};
   background-position: $sprite-offset-x  $sprite-offset-y;
 }
 
+@mixin sprite-size($sprite) {
+  $sprite-offset-width: nth($sprite, 3);
+  $sprite-offset-height: nth($sprite, 4);
+  background-position: $sprite-offset-width  $sprite-offset-height;
+}
+
 @mixin sprite($sprite) {
   @include sprite-position($sprite);
+  @include sprite-size($sprite);
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
